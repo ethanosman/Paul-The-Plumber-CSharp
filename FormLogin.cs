@@ -12,6 +12,7 @@ namespace PaulsTimber
 {
     public partial class frmLogin : Form
     {
+        // Initalise form
         public frmLogin()
         {
             InitializeComponent();
@@ -21,12 +22,14 @@ namespace PaulsTimber
             txtPassword.UseSystemPasswordChar = true;
         }
 
+        // Clear form's contents
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtUserName.Text = "";
             txtPassword.Text = "";
         }
 
+        // Login button to main form
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string userName = "testusername", password = "testpassword";
@@ -56,6 +59,7 @@ namespace PaulsTimber
             }
         }
 
+        // Show/hides password characters based on whether check box is ticked or not
         private void chkShow_CheckedChanged(object sender, EventArgs e)
         {
             if (chkShow.Checked)
@@ -68,6 +72,7 @@ namespace PaulsTimber
             }
         }
 
+        // Exit button to close program
         private void btnExit_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
